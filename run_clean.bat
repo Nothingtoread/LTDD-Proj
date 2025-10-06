@@ -1,0 +1,6 @@
+@echo off
+echo Starting SMS OTP App with filtered console output...
+echo Filtering out IMGMapper errors...
+echo.
+
+flutter run -d R9HRA0EHNFL --verbose 2>&1 | findstr /V "IMGMapper" | findstr /V "Unset optional value from type"
